@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Typography component='h1' variant='h2'>
-        Todos
+      <Typography component='h1' variant='h3'>
+        Todo List in Hooks
       </Typography>
 
       <TodoForm
