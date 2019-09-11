@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className='App'>
       <Typography component='h1' variant='h2'>
-        Todos
+        Todo List used Hooks
       </Typography>
       <TodoForm
         saveTodo={todoText => {
@@ -25,7 +25,14 @@ const App = () => {
         }}
       />
 
-      <TodoList todos={todos} />
+      <TodoList
+        todos={todos}
+        deleteTodo={todoIndex => {
+          const newTodos = todos.filter((_, index) => index !== todoIndex);
+
+          setTodos(newTodos);
+        }}
+      />
     </div>
   );
 };
