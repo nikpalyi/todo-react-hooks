@@ -1,10 +1,12 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import Typography from '@material-ui/core/Typography';
 import './styles.css';
 
 import TodoForm from './TodoForm';
 import React, { useState } from 'react';
+
+import TodoList from './TodoList';
+import './styles.css';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -14,6 +16,7 @@ const App = () => {
         Todos
       </Typography>
       <TodoForm saveTodo={console.warn} />
+      <TodoList todos={todos} />
     </div>
   );
 };
