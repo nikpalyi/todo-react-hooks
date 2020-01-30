@@ -1,5 +1,6 @@
 {
-  "name": "new",
+  "homepage": "https://nikpalyi.github.io/todo-react-hooks/",
+  "name": "todo-hooks",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -11,8 +12,12 @@
     "react-dom": "16.7.0-alpha.0 - next",
     "react-scripts": "2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
